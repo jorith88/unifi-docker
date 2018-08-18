@@ -5,7 +5,7 @@ services:
     networks:
       - unifi
     ports:
-      - "37117:27117"
+      - "37017:27017"
     restart: always
     volumes:
       - db:/data/db
@@ -24,8 +24,8 @@ services:
       - cert:/unifi/cert
       - init:/unifi/init.d
     environment:
-      DB_URI: mongodb://localhost:37117/unifi
-      STATDB_URI: mongodb://localhost:37117/unifi_stat
+      DB_URI: mongodb://localhost:37017/unifi
+      STATDB_URI: mongodb://localhost:37017/unifi_stat
       DB_NAME: unifi
       RUNAS_UID0: "false"
       TZ: "Europe/Amsterdam"
