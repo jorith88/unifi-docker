@@ -127,6 +127,8 @@ if ! [[ -z "$DB_URI" || -z "$STATDB_URI" || -z "$DB_NAME" ]]; then
   settings["unifi.db.name"]="$DB_NAME"
   settings["unifi.http.port"]="5050"
   settings["unifi.https.port"]="5443"
+  settings["portal.http.port"]="5550"
+  settings["portal.http.port"]="5543"
 fi
 
 for key in "${!settings[@]}"; do
