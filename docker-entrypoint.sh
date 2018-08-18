@@ -125,6 +125,8 @@ if ! [[ -z "$DB_URI" || -z "$STATDB_URI" || -z "$DB_NAME" ]]; then
   settings["db.mongo.uri"]="$DB_URI"
   settings["statdb.mongo.uri"]="$STATDB_URI"
   settings["unifi.db.name"]="$DB_NAME"
+  settings["unifi.http.port"]="5050"
+  settings["unifi.https.port"]="5443"
 fi
 
 for key in "${!settings[@]}"; do
